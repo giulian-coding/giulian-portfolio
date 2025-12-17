@@ -1,0 +1,54 @@
+{
+  "formal": [
+    {
+      "degree": "Bachelor of Science in Computer Science",
+      "institution": "Technical University",
+      "location": "Germany",
+      "period": "2020 - 2024",
+      "status": "Completed",
+      "description": "Focused on software engineering, web development, and database systems. Graduated with honors.",
+      "achievements": [
+        "Graduated with Distinction (GPA: 1.5)",
+        "Dean's List for 4 consecutive semesters",
+        "Best Thesis Award in Web Technologies",
+        "Active member of Computer Science Club"
+      ],
+      "courses": [
+        "Data Structures & Algorithms",
+        "Web Development",
+        "Database Systems",
+        "Software Engineering",
+        "Cloud Computing",
+        "Machine Learning Basics"
+      ]
+    },
+    {
+      "degree": "High School Diploma (Abitur)",
+      "institution": "Gymnasium",
+      "location": "Germany",
+      "period": "2012 - 2020",
+      "status": "Completed",
+      "description": "Focus on Mathematics, Computer Science, and English. Participated in various programming competitions.",
+      "achievements": [
+        "Advanced courses in Mathematics & CS",
+        "1st Place - Regional Programming Competition",
+        "Student Council Representative",
+        "Volunteer tutoring in Mathematics"
+      ],
+      "courses": [
+        "Advanced Mathematics",
+        "Computer Science",
+        "Physics",
+        "English"
+      ]
+    }
+  ],
+  "online": [
+    { "title": "Full-Stack Web Development", "platform": "Udemy", "year": "2023" },
+    { "title": "React - The Complete Guide", "platform": "Udemy", "year": "2023" },
+    { "title": "Node.js, Express, MongoDB", "platform": "Udemy", "year": "2022" },
+    { "title": "Advanced TypeScript", "platform": "Frontend Masters", "year": "2023" },
+    { "title": "System Design for Interviews", "platform": "educative.io", "year": "2024" },
+    { "title": "AWS Cloud Practitioner", "platform": "A Cloud Guru", "year": "2024" }
+  ]
+}

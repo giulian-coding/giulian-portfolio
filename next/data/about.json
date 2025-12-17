@@ -1,0 +1,40 @@
+{
+  "name": "Giulian",
+  "title": "Full-Stack Developer",
+  "location": "Germany",
+  "experience": "3+ Years",
+  "bio": [
+    "I'm Giulian, a passionate Full-Stack Developer with a love for creating elegant, efficient, and user-friendly web applications. My journey in tech started with curiosity and has evolved into a fulfilling career where I get to solve problems and build things that make a difference.",
+    "When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or enjoying a good cup of coffee while reading about the latest trends in web development."
+  ],
+  "values": [
+    {
+      "title": "Clean Code",
+      "description": "Writing maintainable, readable, and efficient code is my top priority.",
+      "icon": "Code2"
+    },
+    {
+      "title": "User Experience",
+      "description": "Creating intuitive interfaces that users love to interact with.",
+      "icon": "Heart"
+    },
+    {
+      "title": "Continuous Learning",
+      "description": "Always exploring new technologies and expanding my skill set.",
+      "icon": "Gamepad2"
+    }
+  ],
+  "interests": [
+    "Open Source Contribution",
+    "Tech Blogging",
+    "Gaming",
+    "Photography",
+    "Music",
+    "Traveling"
+  ],
+  "social": {
+    "github": "https://github.com",
+    "linkedin": "https://linkedin.com",
+    "email": "hello@example.com"
+  }
+}

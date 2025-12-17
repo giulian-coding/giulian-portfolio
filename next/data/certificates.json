@@ -1,0 +1,50 @@
+[
+  {
+    "title": "AWS Certified Cloud Practitioner",
+    "issuer": "Amazon Web Services",
+    "date": "2024",
+    "description": "Foundational understanding of AWS Cloud services, security, architecture, pricing, and support.",
+    "credentialUrl": "#",
+    "badge": "Cloud"
+  },
+  {
+    "title": "Professional Scrum Master I",
+    "issuer": "Scrum.org",
+    "date": "2024",
+    "description": "Demonstrated understanding of Scrum framework, its application, and Agile methodologies.",
+    "credentialUrl": "#",
+    "badge": "Agile"
+  },
+  {
+    "title": "Meta Front-End Developer",
+    "issuer": "Meta (Coursera)",
+    "date": "2023",
+    "description": "Comprehensive training in React, JavaScript, HTML, CSS, and responsive web design.",
+    "credentialUrl": "#",
+    "badge": "Frontend"
+  },
+  {
+    "title": "Google IT Support Professional",
+    "issuer": "Google (Coursera)",
+    "date": "2023",
+    "description": "Foundations of IT support including troubleshooting, networking, and system administration.",
+    "credentialUrl": "#",
+    "badge": "IT"
+  },
+  {
+    "title": "MongoDB Developer Certification",
+    "issuer": "MongoDB University",
+    "date": "2023",
+    "description": "Proficiency in MongoDB database design, queries, aggregation, and data modeling.",
+    "credentialUrl": "#",
+    "badge": "Database"
+  },
+  {
+    "title": "TypeScript Developer",
+    "issuer": "freeCodeCamp",
+    "date": "2022",
+    "description": "Advanced TypeScript concepts including generics, decorators, and type manipulation.",
+    "credentialUrl": "#",
+    "badge": "Language"
+  }
+]
