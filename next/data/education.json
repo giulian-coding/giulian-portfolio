@@ -1,9 +1,49 @@
 {
   "formal": [
+        {
+      "degree": "IT-System Engineer",
+      "institution": "Avaris/IT AG",
+      "location": "Switzerland",
+      "period": "2025 - now",
+      "status": "Employment",
+      "description": "Focus on Mathematics, Computer Science, and English. Participated in various programming competitions.",
+      "achievements": [
+        "Advanced courses in Mathematics & CS",
+        "1st Place - Regional Programming Competition",
+        "Student Council Representative",
+        "Volunteer tutoring in Mathematics"
+      ],
+      "courses": [
+        "Advanced Mathematics",
+        "Computer Science",
+        "Physics",
+        "English"
+      ]
+    },
+        {
+      "degree": "Swiss Federal Vocational Baccalaureate – Engineering, Architecture and Life Sciences",
+      "institution": "BZWU",
+      "location": "Switzerland",
+      "period": "2024 - 2025",
+      "status": "Completed",
+      "description": "Focus on Mathematics, Computer Science, and English. Participated in various programming competitions.",
+      "achievements": [
+        "Advanced courses in Mathematics & CS",
+        "1st Place - Regional Programming Competition",
+        "Student Council Representative",
+        "Volunteer tutoring in Mathematics"
+      ],
+      "courses": [
+        "Advanced Mathematics",
+        "Computer Science",
+        "Physics",
+        "English"
+      ]
+    },
     {
-      "degree": "Bachelor of Science in Computer Science",
-      "institution": "Technical University",
-      "location": "Germany",
+      "degree": "Apprenticeship in IT",
+      "institution": "BZWU",
+      "location": "Switzerland",
       "period": "2020 - 2024",
       "status": "Completed",
       "description": "Focused on software engineering, web development, and database systems. Graduated with honors.",
@@ -20,26 +60,6 @@
         "Software Engineering",
         "Cloud Computing",
         "Machine Learning Basics"
-      ]
-    },
-    {
-      "degree": "High School Diploma (Abitur)",
-      "institution": "Gymnasium",
-      "location": "Germany",
-      "period": "2012 - 2020",
-      "status": "Completed",
-      "description": "Focus on Mathematics, Computer Science, and English. Participated in various programming competitions.",
-      "achievements": [
-        "Advanced courses in Mathematics & CS",
-        "1st Place - Regional Programming Competition",
-        "Student Council Representative",
-        "Volunteer tutoring in Mathematics"
-      ],
-      "courses": [
-        "Advanced Mathematics",
-        "Computer Science",
-        "Physics",
-        "English"
       ]
     }
   ],

@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cat:*)",
+      "Bash(npm run build:*)",
+      "Bash(npm install:*)",
+      "WebSearch",
+      "Bash(npm exec:*)",
+      "Bash(node -e:*)",
+      "Bash(ls -la \"C:\\\\Users\\\\giuli\\\\Documents\\\\GitHub\\\\giulian-portfolio\\\\next\\\\public\\\\icons\"\" 2>/dev/null || dir \"C:UsersgiuliDocumentsGitHubgiulian-portfolionextpublicicons\"\")",
+      "Bash(dir:*)"
+    ]
+  }
+}

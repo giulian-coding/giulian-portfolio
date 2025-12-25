@@ -1,50 +1,20 @@
 [
   {
-    "title": "AWS Certified Cloud Practitioner",
-    "issuer": "Amazon Web Services",
-    "date": "2024",
-    "description": "Foundational understanding of AWS Cloud services, security, architecture, pricing, and support.",
-    "credentialUrl": "#",
-    "badge": "Cloud"
+    "title": "PCEP™ – Certified Entry-Level Python Programmer",
+    "issuer": "Python Institute",
+    "date": "September 17, 2025",
+    "description": "The PCEP™ certification shows that the individual is familiar with the following concepts: fundamental terms and definitions (e.g. compilation vs. interpretation), Python's logic and structure (e.g. keywords, instructions, indentation), literals, variables, and numeral systems, operators and data types, I/O operations, control flow mechanisms (conditional blocks and loops), data collections (lists, tuples, dictionaries, strings), functions (decomposition, built-in and user-defined functions, organizing interaction between functions and their environment, generators, recursion), exceptions (exception handling, hierarchies), as well as the essentials of Python programming language syntax, semantics, and the runtime environment.",
+    "credentialUrl": "https://verify.openedg.org/?id=b1V0.kmaJ.13si",
+    "badge": "Active",
+    "badgeColor": "green"
   },
   {
-    "title": "Professional Scrum Master I",
-    "issuer": "Scrum.org",
-    "date": "2024",
-    "description": "Demonstrated understanding of Scrum framework, its application, and Agile methodologies.",
+    "title": "PCAP™ – Certified Associate Python Programmer",
+    "issuer": "Python Institute",
+    "date": "-",
+    "description": "The PCAP™ certification shows that the individual is familiar with the following concepts: modules, packages, and PIP, character encoding, strings and string processing, generators, iterators, closures, files, file streams, and file processing, exception hierarchies, and exception classes and objects, working with selected Standard Library modules, and the fundamentals of the Object-Oriented Programming (OOP) approach.",
     "credentialUrl": "#",
-    "badge": "Agile"
-  },
-  {
-    "title": "Meta Front-End Developer",
-    "issuer": "Meta (Coursera)",
-    "date": "2023",
-    "description": "Comprehensive training in React, JavaScript, HTML, CSS, and responsive web design.",
-    "credentialUrl": "#",
-    "badge": "Frontend"
-  },
-  {
-    "title": "Google IT Support Professional",
-    "issuer": "Google (Coursera)",
-    "date": "2023",
-    "description": "Foundations of IT support including troubleshooting, networking, and system administration.",
-    "credentialUrl": "#",
-    "badge": "IT"
-  },
-  {
-    "title": "MongoDB Developer Certification",
-    "issuer": "MongoDB University",
-    "date": "2023",
-    "description": "Proficiency in MongoDB database design, queries, aggregation, and data modeling.",
-    "credentialUrl": "#",
-    "badge": "Database"
-  },
-  {
-    "title": "TypeScript Developer",
-    "issuer": "freeCodeCamp",
-    "date": "2022",
-    "description": "Advanced TypeScript concepts including generics, decorators, and type manipulation.",
-    "credentialUrl": "#",
-    "badge": "Language"
+    "badge": "In Progress",
+    "badgeColor": "orange"
   }
 ]

@@ -1,24 +1,8 @@
 [
   {
-    "title": "E-Commerce Platform",
+    "title": "FlowlyChat",
     "description": "A full-featured online store with product management, shopping cart, payment integration, and admin dashboard.",
-    "tags": ["Next.js", "TypeScript", "Stripe", "PostgreSQL", "Tailwind CSS"],
-    "github": "#",
-    "live": "#",
-    "featured": true
-  },
-  {
-    "title": "Task Management App",
-    "description": "A collaborative project management tool with real-time updates, drag-and-drop functionality, and team collaboration features.",
-    "tags": ["React", "Node.js", "Socket.io", "MongoDB", "Redux"],
-    "github": "#",
-    "live": "#",
-    "featured": true
-  },
-  {
-    "title": "AI Chat Application",
-    "description": "An intelligent chatbot interface powered by OpenAI API with conversation history, multiple chat rooms, and markdown support.",
-    "tags": ["Next.js", "OpenAI API", "Prisma", "Vercel AI SDK"],
+    "tags": ["Next.js", "TypeScript", "Stripe", "Supabase", "Tailwind CSS"],
     "github": "#",
     "live": "#",
     "featured": true

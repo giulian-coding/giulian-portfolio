@@ -129,3 +129,62 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Shimmer effect - only on hover */
+.shimmer-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  pointer-events: none;
+  opacity: 0;
+  background: linear-gradient(
+    110deg,
+    transparent 20%,
+    oklch(1 0 0 / 12%) 40%,
+    oklch(1 0 0 / 20%) 50%,
+    oklch(1 0 0 / 12%) 60%,
+    transparent 80%
+  );
+  background-size: 200% 100%;
+  background-position: 200% 0;
+  border-radius: inherit;
+  transition: opacity 0.3s ease;
+}
+
+.group:hover .shimmer-overlay {
+  opacity: 1;
+  animation: shimmer 0.8s ease-out forwards;
+}
+
+.dark .shimmer-overlay {
+  background: linear-gradient(
+    110deg,
+    transparent 20%,
+    oklch(1 0 0 / 5%) 40%,
+    oklch(1 0 0 / 10%) 50%,
+    oklch(1 0 0 / 5%) 60%,
+    transparent 80%
+  );
+  background-size: 200% 100%;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Fade-in on scroll */
+.fade-in-element {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.fade-in-element.fade-in-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
