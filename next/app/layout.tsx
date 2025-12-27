@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Inter } from "next/font/google";
-import { Navigation } from "@/components/navigation";
+import { Geist, Geist_Mono, Inter, Space_Grotesk } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 
@@ -13,6 +12,11 @@ const geistSans = Geist({
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
+const spaceGrotesk = Space_Grotesk({
+  variable: "--font-space",
   subsets: ["latin"],
 });
 
@@ -29,11 +33,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.variable} suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
+        className={`${geistSans.variable} ${geistMono.variable} ${spaceGrotesk.variable} antialiased min-h-screen`}
       >
         <ThemeProvider>
-          <Navigation />
-          <main className="flex-1 pt-16">{children}</main>
+          <main>{children}</main>
         </ThemeProvider>
       </body>
     </html>
