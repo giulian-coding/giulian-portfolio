@@ -3,7 +3,7 @@
     "title": "FlowlyChat",
     "description": "An AI Powered Web Based Whatsapp Chatbot that helps you manage and automate your Customer appointments and inquiries seamlessly.",
     "tags": ["Next.js", "n8n", "Stripe", "Supabase", "Tailwind CSS"],
-    "github": "https://github.com/sxwxbxr/flowlychat.git",
+    "github": "https://github.com/sxwxbxr/flowlychat",
     "live": "https://www.flowlychat.app",
     "featured": true
   },
@@ -19,7 +19,7 @@
     "title": "Portfolio Website",
     "description": "This very website you're viewing! A modern, responsive portfolio built with Next.js and Tailwind CSS.",
     "tags": ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
-    "github": "#",
+    "github": "https://github.com/giulian-coding/giulian-portfolio",
     "live": "https://www.giulian.me",
     "featured": false
   },
@@ -28,7 +28,6 @@
     "description": "A Playground to experiment with various AI models, libraries, and APIs for learning and prototyping purposes.",
     "tags": ["Python", "TensorFlow", "Keras", "Numpy"],
     "github": "https://github.com/giulian-coding/AI-Playground",
-    "live": "#",
     "featured": false
   },
   {
@@ -36,7 +35,6 @@
     "description": "A Social Media App for Motorcycle Enthusiasts to connect, share rides, and discuss all things motorcycles.",
     "tags": ["Terraform", "Pulumi", "Next.js", "TypeScript", "Tailwind CSS", "Supabase", "Kubernetes", "Docker", "Python", "Traefik"],
     "github": "https://github.com/giulian-coding/motocom",
-    "live": "#",
     "featured": false
   }
 ]

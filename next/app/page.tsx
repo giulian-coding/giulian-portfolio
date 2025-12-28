@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { MapPin, Calendar, Coffee, Code2, Heart, Gamepad2, FolderGit2, ExternalLink, Github, Star, GraduationCap, Trophy, Award, Building2, ArrowUpRight, Sun, Moon, Mail, Linkedin } from "lucide-react";
+import { MapPin, Calendar, Coffee, Code2, Heart, Gamepad2, FolderGit2, ExternalLink, Github, Star, GraduationCap, Trophy, Award, Building2, ArrowUpRight, Sun, Moon, Mail, Linkedin, Zap, Leaf } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import about from "@/data/about.json";
@@ -27,6 +27,8 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   Code2,
   Heart,
   Gamepad2,
+  Zap,
+  Leaf,
 };
 
 const techIconMap: Record<string, string> = {
@@ -249,29 +251,21 @@ export default function HomePage() {
           {/* Right Column - Content */}
           <div className="lg:col-span-9 space-y-16">
             <FadeIn>
-              <div className="grid md:grid-cols-3 gap-8">
-                <div className="md:col-span-1">
-                  <div className="aspect-[3/4] rounded-2xl bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center border border-border overflow-hidden">
-                    <span className="font-display text-8xl font-black text-primary/20">{about.name.charAt(0)}</span>
+              <div className="space-y-6">
+                {about.bio.map((paragraph, index) => (
+                  <p key={index} className="font-space text-lg text-muted-foreground leading-relaxed">
+                    {paragraph}
+                  </p>
+                ))}
+
+                <div className="flex flex-wrap gap-4 sm:gap-6 pt-4">
+                  <div className="flex items-center gap-2 text-sm">
+                    <MapPin className="h-4 w-4 text-primary" />
+                    <span>{about.location}</span>
                   </div>
-                </div>
-
-                <div className="md:col-span-2 space-y-6">
-                  {about.bio.map((paragraph, index) => (
-                    <p key={index} className="font-space text-lg text-muted-foreground leading-relaxed">
-                      {paragraph}
-                    </p>
-                  ))}
-
-                  <div className="flex flex-wrap gap-6 pt-4">
-                    <div className="flex items-center gap-2 text-sm">
-                      <MapPin className="h-4 w-4 text-primary" />
-                      <span>{about.location}</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-sm">
-                      <Coffee className="h-4 w-4 text-primary" />
-                      <span>Coffee Enthusiast</span>
-                    </div>
+                  <div className="flex items-center gap-2 text-sm">
+                    <Coffee className="h-4 w-4 text-primary" />
+                    <span>Coffee Enthusiast</span>
                   </div>
                 </div>
               </div>
@@ -395,16 +389,18 @@ export default function HomePage() {
                           <span>Code</span>
                           <ArrowUpRight className="h-4 w-4 transition-transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" />
                         </Link>
-                        <Link
-                          href={project.live}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="group/link inline-flex items-center gap-2 font-medium hover:text-primary transition-colors"
-                        >
-                          <ExternalLink className="h-5 w-5" />
-                          <span>Live Demo</span>
-                          <ArrowUpRight className="h-4 w-4 transition-transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" />
-                        </Link>
+                        {project.live && (
+                          <Link
+                            href={project.live}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="group/link inline-flex items-center gap-2 font-medium hover:text-primary transition-colors"
+                          >
+                            <ExternalLink className="h-5 w-5" />
+                            <span>Live Demo</span>
+                            <ArrowUpRight className="h-4 w-4 transition-transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" />
+                          </Link>
+                        )}
                       </div>
                     </AnimatedCard>
                   </FadeIn>
@@ -431,14 +427,16 @@ export default function HomePage() {
                             >
                               <Github className="h-4 w-4" />
                             </Link>
-                            <Link
-                              href={project.live}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="p-2 rounded-lg text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"
-                            >
-                              <ExternalLink className="h-4 w-4" />
-                            </Link>
+                            {project.live && (
+                              <Link
+                                href={project.live}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="p-2 rounded-lg text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"
+                              >
+                                <ExternalLink className="h-4 w-4" />
+                              </Link>
+                            )}
                           </div>
                         </div>
 
