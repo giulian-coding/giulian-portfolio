@@ -1,18 +1,18 @@
 [
   {
     "title": "FlowlyChat",
-    "description": "A full-featured online store with product management, shopping cart, payment integration, and admin dashboard.",
-    "tags": ["Next.js", "TypeScript", "Stripe", "Supabase", "Tailwind CSS"],
-    "github": "#",
-    "live": "#",
+    "description": "An AI Powered Web Based Whatsapp Chatbot that helps you manage and automate your Customer appointments and inquiries seamlessly.",
+    "tags": ["Next.js", "n8n", "Stripe", "Supabase", "Tailwind CSS"],
+    "github": "https://github.com/sxwxbxr/flowlychat.git",
+    "live": "https://www.flowlychat.app",
     "featured": true
   },
   {
-    "title": "Weather Dashboard",
-    "description": "A beautiful weather application with location-based forecasts, interactive maps, and hourly/weekly predictions.",
-    "tags": ["React", "Weather API", "Chart.js", "Geolocation"],
-    "github": "#",
-    "live": "#",
+    "title": "Kubervise",
+    "description": "A Webbased Kubernetes management tool that simplifies cluster monitoring, deployment, and scaling.",
+    "tags": ["Next.js", "Kubernetes", "Docker", "Python", "PostgreSQL", "Supabase"],
+    "github": "https://github.com/giulian-coding/kubervise",
+    "live": "https://www.kubervise.com",
     "featured": false
   },
   {
@@ -20,14 +20,22 @@
     "description": "This very website you're viewing! A modern, responsive portfolio built with Next.js and Tailwind CSS.",
     "tags": ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
     "github": "#",
+    "live": "https://www.giulian.me",
+    "featured": false
+  },
+  {
+    "title": "AI Playground",
+    "description": "A Playground to experiment with various AI models, libraries, and APIs for learning and prototyping purposes.",
+    "tags": ["Python", "TensorFlow", "Keras", "Numpy"],
+    "github": "https://github.com/giulian-coding/AI-Playground",
     "live": "#",
     "featured": false
   },
   {
-    "title": "Blog Platform",
-    "description": "A full-stack blogging platform with MDX support, authentication, comments, and SEO optimization.",
-    "tags": ["Next.js", "MDX", "NextAuth", "PostgreSQL"],
-    "github": "#",
+    "title": "Motocom",
+    "description": "A Social Media App for Motorcycle Enthusiasts to connect, share rides, and discuss all things motorcycles.",
+    "tags": ["Terraform", "Pulumi", "Next.js", "TypeScript", "Tailwind CSS", "Supabase", "Kubernetes", "Docker", "Python", "Traefik"],
+    "github": "https://github.com/giulian-coding/motocom",
     "live": "#",
     "featured": false
   }

@@ -2,21 +2,19 @@
   "name": "Giulian",
   "title": "IT-System-Engineer",
   "location": "Switzerland",
-  "experience": "3+ Years",
   "bio": [
-    "I'm Giulian, a passionate Full-Stack Developer with a love for creating elegant, efficient, and user-friendly web applications. My journey in tech started with curiosity and has evolved into a fulfilling career where I get to solve problems and build things that make a difference.",
-    "When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or enjoying a good cup of coffee while reading about the latest trends in web development."
+    "I'm Giulian, a passionate Developer and IT-System Engineer with a love for creating elegant, efficient, and user-friendly digital solutions. With a background in IT systems and a knack for coding, I specialize in building backend and web applications that not only look great but also perform seamlessly."
   ],
   "values": [
     {
-      "title": "Clean Code",
-      "description": "Writing maintainable, readable, and efficient code is my top priority.",
-      "icon": "Code2"
+      "title": "Automation",
+      "description": "Streamlining processes to save time and reduce errors.",
+      "icon": "Zap"
     },
     {
-      "title": "User Experience",
-      "description": "Creating intuitive interfaces that users love to interact with.",
-      "icon": "Heart"
+      "title": "Sustainability",
+      "description": "Building solutions that are maintainable and scalable for the long term.",
+      "icon": "Leaf"
     },
     {
       "title": "Continuous Learning",
@@ -25,16 +23,15 @@
     }
   ],
   "interests": [
-    "Open Source Contribution",
-    "Tech Blogging",
-    "Gaming",
-    "Photography",
+    "Coding & Development",
+    "Driving Motorcycles",
+    "Movies & Series",
     "Music",
-    "Traveling"
+    "Fitness"
   ],
   "social": {
-    "github": "https://github.com",
-    "linkedin": "https://linkedin.com",
-    "email": "hello@example.com"
+    "github": "https://github.com/giulian-coding",
+    "linkedin": "https://www.linkedin.com/in/giulian-giger-ch/",
+    "email": "giulian.giger@icloud.com"
   }
 }

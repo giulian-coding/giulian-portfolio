@@ -269,10 +269,6 @@ export default function HomePage() {
                       <span>{about.location}</span>
                     </div>
                     <div className="flex items-center gap-2 text-sm">
-                      <Calendar className="h-4 w-4 text-primary" />
-                      <span>{about.experience}</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-sm">
                       <Coffee className="h-4 w-4 text-primary" />
                       <span>Coffee Enthusiast</span>
                     </div>
