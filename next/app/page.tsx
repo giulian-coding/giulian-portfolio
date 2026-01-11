@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { MapPin, Calendar, Coffee, Code2, Heart, Gamepad2, FolderGit2, ExternalLink, Github, Star, GraduationCap, Trophy, Award, Building2, ArrowUpRight, Sun, Moon, Mail, Linkedin, Zap, Leaf } from "lucide-react";
+import { MapPin, Calendar, Coffee, Code2, Heart, Gamepad2, FolderGit2, ExternalLink, Github, GraduationCap, Trophy, Award, Building2, Sun, Moon, Mail, Linkedin, Zap, Leaf } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import about from "@/data/about.json";
@@ -73,8 +73,9 @@ function TechItem({ name, level }: { name: string; level: number }) {
   const iconFile = techIconMap[name];
 
   return (
-    <div className="group relative p-6 rounded-2xl bg-background border border-border transition-all duration-300 ease-out cursor-default hover:border-primary/50 hover-lift">
-      <div className="w-16 h-16 flex items-center justify-center transition-all duration-300 group-hover:blur-sm group-hover:opacity-30">
+    <div className="group relative p-6 rounded-2xl bg-background border border-border transition-all duration-300 ease-out cursor-default hover:border-primary/50 hover-lift active:border-primary/50">
+      {/* Icon - hidden on hover/active */}
+      <div className="w-16 h-16 flex items-center justify-center transition-all duration-300 group-hover:blur-sm group-hover:opacity-30 group-active:blur-sm group-active:opacity-30 md:group-hover:blur-sm md:group-hover:opacity-30">
         {iconFile ? (
           <Image
             src={`/${iconFile}`}
@@ -90,7 +91,8 @@ function TechItem({ name, level }: { name: string; level: number }) {
         )}
       </div>
 
-      <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+      {/* Info overlay - shown on hover/active */}
+      <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 group-active:opacity-100 md:group-hover:opacity-100 transition-all duration-300 pointer-events-none">
         <span className="text-sm font-medium whitespace-nowrap mb-2">{name}</span>
         <div className="flex items-center gap-2">
           <div className="w-16 h-1.5 rounded-full bg-accent overflow-hidden">
@@ -107,8 +109,6 @@ function TechItem({ name, level }: { name: string; level: number }) {
 }
 
 export default function HomePage() {
-  const featuredProjects = projects.filter((p) => p.featured);
-  const otherProjects = projects.filter((p) => !p.featured);
   const { theme, toggleTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
   const [activeSection, setActiveSection] = useState("hero");
@@ -195,29 +195,11 @@ export default function HomePage() {
           {/* Main Title - Modern Typography */}
           <div className="relative mb-12">
             <h1 className="font-display text-[clamp(3.5rem,12vw,9rem)] font-black leading-none tracking-tight">
-              <span className="inline-block">Giulian</span>
-              <span className="inline-block w-3 h-3 sm:w-4 sm:h-4 bg-primary rounded-full ml-1 mb-2 sm:mb-4 animate-pulse" />
+              Giulian
             </h1>
           </div>
 
-          {/* Subtitle with asymmetric layout */}
-          <div className="max-w-xl ml-auto mr-0 lg:mr-24">
-            <p className="font-space text-lg sm:text-xl text-muted-foreground leading-relaxed">
-              Building digital experiences with code.
-              <span className="text-foreground font-medium"> Focused on craft</span>,
-              driven by curiosity.
-            </p>
-          </div>
 
-          {/* Scroll Indicator */}
-          <div className="absolute bottom-12 left-6 sm:left-12 lg:left-24">
-            <div className="flex items-center gap-3">
-              <div className="w-px h-16 bg-gradient-to-b from-primary to-transparent" />
-              <span className="font-mono text-[10px] tracking-widest text-muted-foreground rotate-90 origin-left translate-x-2">
-                SCROLL
-              </span>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -314,9 +296,6 @@ export default function HomePage() {
             <div className="lg:sticky lg:top-24">
               <span className="font-mono text-xs tracking-widest text-muted-foreground">02</span>
               <h2 className="font-display text-4xl sm:text-5xl font-bold mt-2">Stack</h2>
-              <p className="text-muted-foreground mt-4 font-space">
-                Tools I use daily
-              </p>
             </div>
           </div>
 
@@ -338,127 +317,56 @@ export default function HomePage() {
           <div className="lg:col-span-3">
             <div className="lg:sticky lg:top-24">
               <span className="font-mono text-xs tracking-widest text-muted-foreground">03</span>
-              <h2 className="font-display text-4xl sm:text-5xl font-bold mt-2">
-                Selected<br />
-                <span className="text-stroke">Works</span>
-              </h2>
-              <p className="text-muted-foreground font-space mt-4">
-                A curated selection of projects
-              </p>
+              <h2 className="font-display text-4xl sm:text-5xl font-bold mt-2">Projects</h2>
             </div>
           </div>
 
-          <div className="lg:col-span-9 space-y-8">
-            {/* Featured Projects */}
-            {featuredProjects.length > 0 && (
-              <div className="space-y-8">
-                {featuredProjects.map((project, index) => (
-                  <FadeIn key={index} delay={index * 100}>
-                    <AnimatedCard className="group p-8 rounded-3xl bg-background border border-border hover:border-primary/50">
-                      <div className="flex items-center gap-3 mb-6">
-                        <Star className="h-4 w-4 text-primary" />
-                        <span className="font-mono text-xs tracking-widest text-muted-foreground">FEATURED</span>
-                      </div>
-
-                      <div className="aspect-video rounded-2xl bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center border border-border overflow-hidden mb-6">
-                        <FolderGit2 className="h-16 w-16 text-primary/20" />
-                      </div>
-
-                      <h3 className="font-display text-2xl font-bold mb-3">{project.title}</h3>
-                      <p className="text-muted-foreground font-space mb-4">{project.description}</p>
-
-                      <div className="flex flex-wrap gap-2 mb-6">
-                        {project.tags.map((tag, tagIndex) => (
-                          <span
-                            key={tagIndex}
-                            className="px-3 py-1 rounded-full text-xs bg-accent text-muted-foreground"
-                          >
-                            {tag}
-                          </span>
-                        ))}
-                      </div>
-
-                      <div className="flex items-center gap-6">
+          <div className="lg:col-span-9">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {projects.map((project, index) => (
+                <FadeIn key={index} delay={index * 50}>
+                  <AnimatedCard className="p-6 rounded-2xl bg-background border border-border hover:border-primary/50 flex flex-col h-full">
+                    <div className="flex items-center justify-between mb-4">
+                      <FolderGit2 className="h-6 w-6 text-primary" />
+                      <div className="flex items-center gap-2">
                         <Link
                           href={project.github}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="group/link inline-flex items-center gap-2 font-medium hover:text-primary transition-colors"
+                          className="p-2 rounded-lg text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"
                         >
-                          <Github className="h-5 w-5" />
-                          <span>Code</span>
-                          <ArrowUpRight className="h-4 w-4 transition-transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" />
+                          <Github className="h-4 w-4" />
                         </Link>
                         {project.live && (
                           <Link
                             href={project.live}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="group/link inline-flex items-center gap-2 font-medium hover:text-primary transition-colors"
+                            className="p-2 rounded-lg text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"
                           >
-                            <ExternalLink className="h-5 w-5" />
-                            <span>Live Demo</span>
-                            <ArrowUpRight className="h-4 w-4 transition-transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" />
+                            <ExternalLink className="h-4 w-4" />
                           </Link>
                         )}
                       </div>
-                    </AnimatedCard>
-                  </FadeIn>
-                ))}
-              </div>
-            )}
+                    </div>
 
-            {/* Other Projects Grid */}
-            {otherProjects.length > 0 && (
-              <div className="mt-16">
-                <h3 className="font-mono text-xs tracking-widest text-muted-foreground mb-8">MORE PROJECTS</h3>
-                <div className="grid sm:grid-cols-2 gap-4">
-                  {otherProjects.map((project, index) => (
-                    <FadeIn key={index} delay={index * 50}>
-                      <AnimatedCard className="p-6 rounded-2xl bg-background border border-border hover:border-primary/50 flex flex-col h-full">
-                        <div className="flex items-center justify-between mb-4">
-                          <FolderGit2 className="h-6 w-6 text-primary" />
-                          <div className="flex items-center gap-2">
-                            <Link
-                              href={project.github}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="p-2 rounded-lg text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"
-                            >
-                              <Github className="h-4 w-4" />
-                            </Link>
-                            {project.live && (
-                              <Link
-                                href={project.live}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="p-2 rounded-lg text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"
-                              >
-                                <ExternalLink className="h-4 w-4" />
-                              </Link>
-                            )}
-                          </div>
-                        </div>
+                    <h4 className="font-display font-bold text-lg mb-2">{project.title}</h4>
+                    <p className="text-sm text-muted-foreground mb-4 flex-1">{project.description}</p>
 
-                        <h4 className="font-display font-bold text-lg mb-2">{project.title}</h4>
-                        <p className="text-sm text-muted-foreground mb-4 flex-1">{project.description}</p>
-
-                        <div className="flex flex-wrap gap-2">
-                          {project.tags.slice(0, 3).map((tag, tagIndex) => (
-                            <span
-                              key={tagIndex}
-                              className="px-2 py-1 rounded text-xs bg-accent text-muted-foreground"
-                            >
-                              {tag}
-                            </span>
-                          ))}
-                        </div>
-                      </AnimatedCard>
-                    </FadeIn>
-                  ))}
-                </div>
-              </div>
-            )}
+                    <div className="flex flex-wrap gap-2">
+                      {project.tags.slice(0, 3).map((tag: string, tagIndex: number) => (
+                        <span
+                          key={tagIndex}
+                          className="px-2 py-1 rounded text-xs bg-accent text-muted-foreground"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  </AnimatedCard>
+                </FadeIn>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -565,12 +473,7 @@ export default function HomePage() {
           <div className="lg:col-span-3">
             <div className="lg:sticky lg:top-24">
               <span className="font-mono text-xs tracking-widest text-muted-foreground">05</span>
-              <h2 className="font-display text-4xl sm:text-5xl font-bold mt-2">
-                Certifi<span className="text-stroke">cates</span>
-              </h2>
-              <p className="text-muted-foreground font-space mt-4">
-                Continuous learning journey
-              </p>
+              <h2 className="font-display text-4xl sm:text-5xl font-bold mt-2">Certificates</h2>
             </div>
           </div>
 
@@ -628,12 +531,7 @@ export default function HomePage() {
           <div className="lg:col-span-3">
             <div>
               <span className="font-mono text-xs tracking-widest text-muted-foreground">06</span>
-              <h2 className="font-display text-4xl sm:text-5xl font-bold mt-2">
-                Con<span className="text-stroke">tact</span>
-              </h2>
-              <p className="text-muted-foreground font-space mt-4">
-                Let&apos;s work together
-              </p>
+              <h2 className="font-display text-4xl sm:text-5xl font-bold mt-2">Contact</h2>
             </div>
           </div>
 
@@ -642,10 +540,6 @@ export default function HomePage() {
               <div className="space-y-8">
                 <div className="max-w-lg">
                   <h3 className="font-display text-2xl font-bold mb-4">Get in Touch</h3>
-                  <p className="text-muted-foreground font-space leading-relaxed">
-                    I&apos;m always interested in hearing about new projects and opportunities.
-                    Whether you have a question or just want to say hi, feel free to reach out!
-                  </p>
                 </div>
 
                 {/* Contact Links */}
@@ -698,14 +592,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="py-12 px-6 sm:px-12 lg:px-24 border-t border-border">
-        <div className="flex flex-wrap items-center justify-between gap-4 text-sm text-muted-foreground">
-          <span className="font-mono text-xs">© {new Date().getFullYear()} Giulian. All rights reserved.</span>
-          <span className="font-mono text-xs">Built with Next.js + Tailwind</span>
-        </div>
-      </footer>
     </div>
   );
 }
