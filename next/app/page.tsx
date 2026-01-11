@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { MapPin, Calendar, Coffee, Code2, Heart, Gamepad2, FolderGit2, ExternalLink, Github, GraduationCap, Trophy, Award, Building2, Sun, Moon, Mail, Linkedin, Zap, Leaf } from "lucide-react";
+import { MapPin, Calendar, Code2, Heart, Gamepad2, FolderGit2, ExternalLink, Github, GraduationCap, Trophy, Award, Building2, Sun, Moon, Mail, Linkedin, Zap, Leaf } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import about from "@/data/about.json";
@@ -244,10 +244,6 @@ export default function HomePage() {
                   <div className="flex items-center gap-2 text-sm">
                     <MapPin className="h-4 w-4 text-primary" />
                     <span>{about.location}</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-sm">
-                    <Coffee className="h-4 w-4 text-primary" />
-                    <span>Coffee Enthusiast</span>
                   </div>
                 </div>
               </div>
